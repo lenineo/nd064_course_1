@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: nginx-alpine-ulianov-staging
+  namespace: argocd
+spec:
+  destination:
+    namespace: default
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      valueFiles:
+        - values-staging.yaml
+    path: deployment
+    repoURL: https://github.com/lenineo/argocd-nginx-alpine
+    targetRevision: HEAD
+  syncPolicy: {}

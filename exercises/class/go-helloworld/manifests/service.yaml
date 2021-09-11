@@ -2,9 +2,9 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: nginx2
-    tag: alpine2
-  name: nginx-alpine2
+    app: nginx
+    tag: alpine
+  name: nginx-alpine
   namespace: demo
 spec:
   ports:
@@ -12,6 +12,6 @@ spec:
     protocol: TCP
     targetPort: 8111
   selector:
-    app: nginx2
-    tag: alpine2
+    app: nginx
+    tag: alpine
   type: ClusterIP
