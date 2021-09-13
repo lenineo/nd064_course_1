@@ -11,7 +11,7 @@ spec:
   source:
     helm:
       valueFiles:
-      - values.yaml
+      - values1.yaml
     path: solutions/helm/python-helloworld
     repoURL: https://github.com/udacity/nd064_course_1 
     targetRevision: HEAD
